@@ -2,6 +2,8 @@
  * REST API client for AI coach sessions.
  */
 
+import { BACKEND_URL } from '../config.js';
+
 async function parseResponse(response) {
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
@@ -12,7 +14,7 @@ async function parseResponse(response) {
 }
 
 export async function startSession(exercise, goal, weightKg) {
-  const response = await fetch('/api/session/start', {
+  const response = await fetch(`${BACKEND_URL}/api/session/start`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -25,7 +27,7 @@ export async function startSession(exercise, goal, weightKg) {
 }
 
 export async function completeSet(sessionId, setData, weightKg) {
-  const response = await fetch(`/api/session/${sessionId}/set-complete`, {
+  const response = await fetch(`${BACKEND_URL}/api/session/${sessionId}/set-complete`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ set_data: setData, weight_kg: Number(weightKg) }),
@@ -34,7 +36,7 @@ export async function completeSet(sessionId, setData, weightKg) {
 }
 
 export async function chatWithCoach(sessionId, message) {
-  const response = await fetch(`/api/session/${sessionId}/chat`, {
+  const response = await fetch(`${BACKEND_URL}/api/session/${sessionId}/chat`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ message }),
@@ -43,18 +45,18 @@ export async function chatWithCoach(sessionId, message) {
 }
 
 export async function endSession(sessionId) {
-  const response = await fetch(`/api/session/${sessionId}/end`, {
+  const response = await fetch(`${BACKEND_URL}/api/session/${sessionId}/end`, {
     method: 'POST',
   });
   return parseResponse(response);
 }
 
 export async function getAllSessions() {
-  const response = await fetch('/api/sessions');
+  const response = await fetch(`${BACKEND_URL}/api/sessions`);
   return parseResponse(response);
 }
 
 export async function getLastSession(exercise) {
-  const response = await fetch(`/api/sessions/last/${exercise}`);
+  const response = await fetch(`${BACKEND_URL}/api/sessions/last/${exercise}`);
   return parseResponse(response);
 }

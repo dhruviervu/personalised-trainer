@@ -10,6 +10,7 @@ import SessionSetup from './components/SessionSetup';
 import SessionSummary from './components/SessionSummary';
 import { useWebSocket } from './hooks/useWebSocket';
 import Dashboard from './pages/Dashboard';
+import { WS_URL } from './config.js';
 
 const WS_PATH = '/ws/session';
 
@@ -67,8 +68,7 @@ export default function App() {
     if (!sessionActive) {
       return null;
     }
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    return `${protocol}//${window.location.host}${WS_PATH}`;
+    return `${WS_URL}${WS_PATH}`;
   }, [sessionActive]);
 
   const {

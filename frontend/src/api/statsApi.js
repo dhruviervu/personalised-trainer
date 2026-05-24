@@ -2,6 +2,8 @@
  * Stats and dashboard API client.
  */
 
+import { BACKEND_URL } from '../config.js';
+
 async function parseResponse(response) {
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
@@ -12,37 +14,37 @@ async function parseResponse(response) {
 }
 
 export async function fetchDashboard() {
-  const response = await fetch('/api/dashboard');
+  const response = await fetch(`${BACKEND_URL}/api/dashboard`);
   return parseResponse(response);
 }
 
 export async function fetchPRs() {
-  const response = await fetch('/api/stats/prs');
+  const response = await fetch(`${BACKEND_URL}/api/stats/prs`);
   return parseResponse(response);
 }
 
 export async function fetchExerciseHistory(exercise) {
-  const response = await fetch(`/api/stats/history/${exercise}`);
+  const response = await fetch(`${BACKEND_URL}/api/stats/history/${exercise}`);
   return parseResponse(response);
 }
 
 export async function fetchExerciseVolume(exercise) {
-  const response = await fetch(`/api/stats/volume/${exercise}`);
+  const response = await fetch(`${BACKEND_URL}/api/stats/volume/${exercise}`);
   return parseResponse(response);
 }
 
 export async function fetchFormTrend(exercise) {
-  const response = await fetch(`/api/stats/form/${exercise}`);
+  const response = await fetch(`${BACKEND_URL}/api/stats/form/${exercise}`);
   return parseResponse(response);
 }
 
 export async function fetchBodyweight() {
-  const response = await fetch('/api/stats/bodyweight');
+  const response = await fetch(`${BACKEND_URL}/api/stats/bodyweight`);
   return parseResponse(response);
 }
 
 export async function logBodyweight(weightKg) {
-  const response = await fetch('/api/stats/bodyweight', {
+  const response = await fetch(`${BACKEND_URL}/api/stats/bodyweight`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ weight_kg: Number(weightKg) }),
