@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { BACKEND_URL } from './src/config.js';
+
+const BACKEND_URL =
+  process.env.VITE_BACKEND_URL || 'https://personalised-trainer.onrender.com';
 
 export default defineConfig({
   plugins: [react()],
