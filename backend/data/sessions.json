@@ -1,0 +1,98 @@
+{
+  "sessions": [
+    {
+      "session_id": "0183ab48-b1be-46b9-a95b-751ef12ccc0f",
+      "exercise": "overhead_press",
+      "goal": "hypertrophy",
+      "date": "2026-05-24T08:22:58.935877+00:00",
+      "sets": [
+        {
+          "set_number": 1,
+          "weight_kg": 50.0,
+          "reps_completed": 10,
+          "good_reps": 10,
+          "bad_reps": 0,
+          "form_flags": [],
+          "avg_angles": {
+            "left_knee": 173.94061832206688,
+            "right_knee": 165.47619609881338,
+            "left_hip": 167.8080405540092,
+            "right_hip": 155.94963355118634,
+            "back_angle": 1.1289109449978905,
+            "left_elbow": 107.58011513240999,
+            "right_elbow": 105.89916016775443,
+            "hip_hinge": 161.87883705259776,
+            "left_wrist_x": 0.6769477573676888,
+            "left_wrist_y": 0.5533684569737678,
+            "right_wrist_x": 0.3150671178159706,
+            "right_wrist_y": 0.5426449792859438
+          },
+          "rpe": 10,
+          "coach_feedback": "Your form looks solid, with a strong lockout and minimal lean back, which is good to see. Your RPE for this set was likely pretty low, but since you didn't mention it, can you give me a number on a scale of 1-10 so I can better understand your exertion level?"
+        },
+        {
+          "set_number": 2,
+          "weight_kg": 50.0,
+          "reps_completed": 3,
+          "good_reps": 3,
+          "bad_reps": 0,
+          "form_flags": [],
+          "avg_angles": {
+            "left_knee": 178.332758886136,
+            "right_knee": 177.61464141985408,
+            "left_hip": 175.3237178554176,
+            "right_hip": 175.61607530765207,
+            "back_angle": 0.6800427856085158,
+            "left_elbow": 116.00652182234052,
+            "right_elbow": 127.533083993036,
+            "hip_hinge": 175.46989658153498,
+            "left_wrist_x": 0.8012861238456989,
+            "left_wrist_y": 1.1415396737660144,
+            "right_wrist_x": 0.27689821008259285,
+            "right_wrist_y": 1.230931515310124
+          },
+          "rpe": null,
+          "coach_feedback": "It looks like the weight is feeling significantly heavier this set, given the drop to 3 reps, and I'm guessing your RPE is now up around an 8 or 9. For your next set, try to focus on explosive acceleration out of the bottom of the press, aiming to get the barbell moving quickly upwards to help you power through the sticking point."
+        }
+      ],
+      "progression_advice": "Given the significant drop in reps from set 1 to set 2, it's clear that the weight was too heavy for your goal of hypertrophy, so for the next session, I'd recommend reducing the weight to allow for higher rep ranges, likely in the 8-12 range, to better align with your hypertrophy goals.",
+      "completed": true
+    },
+    {
+      "session_id": "d84b17ba-4d5c-462a-a660-3eeafd28f811",
+      "exercise": "pull_up",
+      "goal": "hypertrophy",
+      "date": "2026-05-24T08:25:41.988470+00:00",
+      "sets": [
+        {
+          "set_number": 1,
+          "weight_kg": 70.0,
+          "reps_completed": 7,
+          "good_reps": 6,
+          "bad_reps": 1,
+          "form_flags": [
+            "no_chin_over_bar"
+          ],
+          "avg_angles": {
+            "left_knee": 175.51730427734344,
+            "right_knee": 166.12191773496068,
+            "left_hip": 175.400599005889,
+            "right_hip": 163.44319193951569,
+            "back_angle": 0.8991679623083169,
+            "left_elbow": 127.72289082684631,
+            "right_elbow": 121.93169041119617,
+            "hip_hinge": 169.4218954727024,
+            "left_wrist_x": 0.7928916668766662,
+            "left_wrist_y": 0.6042073398985065,
+            "right_wrist_x": 0.31274534692167666,
+            "right_wrist_y": 0.6200861839191512
+          },
+          "rpe": 8,
+          "coach_feedback": "I observed that you completed 7 reps with an average elbow flexion of 125\u00b0, but had some issues with getting your chin over the bar on that last rep. Can you give me an RPE for that set, and then for the next set, I want you to focus on squeezing your lats at the top of the movement to help pull your chest up and get that chin over the bar."
+        }
+      ],
+      "progression_advice": "Based on the session data, I'd recommend addressing the form issue with \"no_chin_over_bar\" first, as it's a recurring problem that can impact the effectiveness of the exercise and your overall progress towards hypertrophy. Let's focus on adjusting your technique to prioritize getting your chin over the bar before considering weight progression.",
+      "completed": true
+    }
+  ]
+}
